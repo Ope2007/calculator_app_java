@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class calculator {
+public static void main(String[] args) {
+Scanner scan = new Scanner(System.in);
+System.out.println("Input first integer : ");
+int x = scan.nextInt();
+int a = x;
+System.out.println("enter second integer");
+int y = scan.nextInt();
+int b = y;
+System.out.println("Choose a function: 1 for addition, 2 for subtraction, 3 for division , 4 for multiplication, 5 for modulus");
+int z = scan.nextInt();
+
+    int addition = a + b;
+    int division = a / b; 
+    int multiplication = a * b;
+    int subtraction = a - b;
+    int modulus = a % b;
+    switch (z) {
+        case 1:
+            System.out.println("Sum: " + addition);
+            break;
+        case 2: 
+            System.out.println("Subtraction: " + subtraction);
+            break;
+        case 3: 
+            System.out.println("Division: " + division);
+            break;
+        case 4:
+            System.out.println("Multiplication: " + multiplication);
+            break;
+        case 5:
+            System.out.println("modulus: " + modulus);
+            break;
+        default:
+            System.out.println("Invalid choice. Please select 1, 2, 3, or 4.");
+    }
+    scan.close(); 
+}
+}
